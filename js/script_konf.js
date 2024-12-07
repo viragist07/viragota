@@ -60,6 +60,6 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
   
   // Initialize cards
   updatePrice(1, 450); // Card 1: "Konferencia"
-  updatePrice(2, 1850, true); // Card 2: "Workshop"
-  updatePrice(3, 2000, true); // Card 3: "Konferencia és Workshop"
+  updatePrice(2, 2100, true); // Card 2: "Workshop"
+  updatePrice(3, 2300, true); // Card 3: "Konferencia és Workshop"
   
