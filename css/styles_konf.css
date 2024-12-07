@@ -109,3 +109,18 @@ select:hover {
 .checkout-button:active {
   transform: scale(0.95);
 }
+
+.original-price {
+  font-size: 1.4em;
+  color: #333333; /* Dark Gray text */
+  text-decoration: line-through;
+  text-decoration-color: red; /* Red line-through */
+  margin-bottom: 8px;
+  display: block;
+  font-family: inherit; /* Uses the page's current font */
+}
+
+
+
+
+

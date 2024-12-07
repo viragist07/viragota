@@ -34,7 +34,7 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
       // Define URLs for redirection
       let redirectUrl = '';
       if (cardId === 1 && (selectedValue === "default" || selectedValue === "100")) {
-        redirectUrl = "#";
+        redirectUrl = "https://buy.stripe.com/8wM0177sxa543NS003";
       } else if (cardId === 2) {
         if (selectedValue === "50") {
           redirectUrl = "#";
@@ -59,7 +59,7 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
   }
   
   // Initialize cards
-  updatePrice(1, 450); // Card 1: "Konferencia"
-  updatePrice(2, 2100, true); // Card 2: "Workshop"
-  updatePrice(3, 2300, true); // Card 3: "Konferencia és Workshop"
+  updatePrice(1, 480); // Card 1: "Konferencia"
+  updatePrice(2, 2080, true); // Card 2: "Workshop"
+  updatePrice(3, 2240, true); // Card 3: "Konferencia és Workshop"
   
