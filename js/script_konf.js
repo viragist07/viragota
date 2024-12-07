@@ -34,7 +34,7 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
       // Define URLs for redirection
       let redirectUrl = '';
       if (cardId === 1 && (selectedValue === "default" || selectedValue === "100")) {
-        redirectUrl = "https://buy.stripe.com/8wM0177sxa543NS003";
+        redirectUrl = "https://buy.stripe.com/4gwbJP1490uugAE4gk";
       } else if (cardId === 2) {
         if (selectedValue === "50") {
           redirectUrl = "#";
