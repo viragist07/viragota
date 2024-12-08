@@ -564,25 +564,34 @@
                         <!--form start-->
                 
 
-                          <form name="contact" netlify>
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <!--name-->
-                                    <input type="text" class="form-control con-validate" id="contact-name" placeholder="Név" minlength=3 >
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <!--email-->
-                                    <input type="email" class="form-control con-validate" id="contact-email" placeholder="Email" >
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <!--message box-->
-                                    <textarea class="form-control con-validate" id="contact-message" placeholder="Üzenet" rows=4 ></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <button id="contact-submit" class="main-button">Küldés</button>
-                                </div>
+                        
+
+                        <form name="contact" method="POST" data-netlify="true" class="row">
+                            <!-- Name -->
+                            <div class="col-md-6 form-group">
+                              <input type="text" class="form-control con-validate" name="name" id="contact-name" placeholder="Név" minlength="3" required />
                             </div>
-                        </form>
+                            <!-- Email -->
+                            <div class="col-md-6 form-group">
+                              <input type="email" class="form-control con-validate" name="email" id="contact-email" placeholder="Email" required />
+                            </div>
+                            <!-- Role -->
+                           <!--  <div class="col-md-12 form-group">
+                              <select name="role[]" class="form-control con-validate" id="contact-role" multiple>
+                                <option value="leader">Leader</option>
+                                <option value="follower">Follower</option>
+                              </select>
+                            </div> -->
+                            <!-- Message -->
+                            <div class="col-md-12 form-group">
+                              <textarea class="form-control con-validate" name="message" id="contact-message" placeholder="Üzenet" rows="4" required></textarea>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col-md-12">
+                              <button type="submit" id="contact-submit" class="main-button">Küldés</button>
+                            </div>
+                          </form>
+                          
                     
                     </div>
                 </div>
