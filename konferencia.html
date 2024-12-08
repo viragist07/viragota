@@ -182,101 +182,101 @@
                 <h2 class="text-right">Jelentkező lap</h2>
 <!--form start-->
 
-                <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                onsubmit="handleFormSubmit(event)"
-                class="row"
-              >
-                <!-- Surname -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="text"
-                    class="form-control con-validate"
-                    name="surname"
-                    id="contact-surname"
-                    placeholder="Vezetéknév"
-                    minlength="2"
-                    required
-                  />
-                </div>
-                <!-- Name -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="text"
-                    class="form-control con-validate"
-                    name="name"
-                    id="contact-name"
-                    placeholder="Keresztnév"
-                    minlength="2"
-                    required
-                  />
-                </div>
-                <!-- Phone Number -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="tel"
-                    class="form-control con-validate"
-                    name="phone"
-                    id="contact-phone"
-                    placeholder="Telefonszám"
-                    pattern="^\+?\d{9,15}$"
-                    required
-                  />
-                </div>
-                <!-- Email -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="email"
-                    class="form-control con-validate"
-                    name="email"
-                    id="contact-email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <!-- Location -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="text"
-                    class="form-control con-validate"
-                    name="location"
-                    id="contact-location"
-                    placeholder="Helység"
-                    required
-                  />
-                </div>
-                <!-- County -->
-                <div class="col-md-6 form-group">
-                  <input
-                    type="text"
-                    class="form-control con-validate"
-                    name="county"
-                    id="contact-county"
-                    placeholder="Megye"
-                    required
-                  />
-                </div>
-                <!-- Dropdown: Mire jelentkezel? -->
-                <div class="col-md-12 form-group">
-                  <select
-                    name="event"
-                    class="form-control con-validate"
-                    id="contact-event"
-                    required
-                  >
-                    <option value="" disabled selected hidden>Mire jelentkezel?</option>
-                    <option value="Konferencia">Konferencia</option>
-                    <option value="Workshop">Workshop</option>
-                    <option value="Konferencia + Workshop">Konferencia + Workshop</option>
-                  </select>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-md-12">
-                  <button type="submit" id="contact-submit" class="main-button">Küldés</button>
-                </div>
-              </form>
+            <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            class="row"
+            >
+            <!-- Surname -->
+            <div class="col-md-6 form-group">
+            <input
+                type="text"
+                class="form-control con-validate"
+                name="surname"
+                id="contact-surname"
+                placeholder="Vezetéknév"
+                minlength="2"
+                required
+            />
+            </div>
+            <!-- Name -->
+            <div class="col-md-6 form-group">
+            <input
+                type="text"
+                class="form-control con-validate"
+                name="name"
+                id="contact-name"
+                placeholder="Keresztnév"
+                minlength="2"
+                required
+            />
+            </div>
+            <!-- Phone Number -->
+            <div class="col-md-6 form-group">
+            <input
+                type="tel"
+                class="form-control con-validate"
+                name="phone"
+                id="contact-phone"
+                placeholder="Telefonszám"
+                pattern="^\+?\d{9,15}$"
+                required
+            />
+            </div>
+            <!-- Email -->
+            <div class="col-md-6 form-group">
+            <input
+                type="email"
+                class="form-control con-validate"
+                name="email"
+                id="contact-email"
+                placeholder="Email"
+                required
+            />
+            </div>
+            <!-- Location -->
+            <div class="col-md-6 form-group">
+            <input
+                type="text"
+                class="form-control con-validate"
+                name="location"
+                id="contact-location"
+                placeholder="Helység"
+                required
+            />
+            </div>
+            <!-- County -->
+            <div class="col-md-6 form-group">
+            <input
+                type="text"
+                class="form-control con-validate"
+                name="county"
+                id="contact-county"
+                placeholder="Megye"
+                required
+            />
+            </div>
+            <!-- Dropdown: Mire jelentkezel? -->
+            <div class="col-md-12 form-group">
+            <select
+                name="chosen_item"
+                class="form-control con-validate"
+                id="contact-event"
+                required
+            >
+                <option value="" disabled selected hidden>Mire jelentkezel?</option>
+                <option value="Konferencia">Konferencia</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Konferencia + Workshop">Konferencia + Workshop</option>
+            </select>
+            </div>
+            <!-- Submit Button -->
+            <div class="col-md-12">
+            <button type="submit" id="contact-submit" class="main-button">Küldés</button>
+            </div>
+            </form>
+
               
               <!-- Blank line -->
               <br />
@@ -289,6 +289,7 @@
     </div>
 </section>
 <!--Contact Us Section Ends-->
+
 <div class="program-container">
 
 
