@@ -145,7 +145,7 @@
 
 
 
-                         <div class="program-container">
+    <div class="program-container">
 
        
         <h2>Program</h2>
@@ -170,31 +170,132 @@
         </div>
 
         <br><br>
-        <p class="highlight">Early Bird jegyek: -20% kedvezmény, január 9-ig.</p>
+       
     </div>
 
+<!--Contact Us Section Start-->
+    <section id="contact">
+        <div class="container">
+        
+            <!--form section-->
+            <div class="col-md-8 col-sm-12 wow fadeInRight message-box" data-wow-delay="0.6s">
+                <h2 class="text-right">Jelentkező lap</h2>
+<!--form start-->
 
-
-
-
-
-
-
-                    </div>
+                <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onsubmit="handleFormSubmit(event)"
+                class="row"
+              >
+                <!-- Surname -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control con-validate"
+                    name="surname"
+                    id="contact-surname"
+                    placeholder="Vezetéknév"
+                    minlength="2"
+                    required
+                  />
                 </div>
-                
+                <!-- Name -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control con-validate"
+                    name="name"
+                    id="contact-name"
+                    placeholder="Keresztnév"
+                    minlength="2"
+                    required
+                  />
+                </div>
+                <!-- Phone Number -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="tel"
+                    class="form-control con-validate"
+                    name="phone"
+                    id="contact-phone"
+                    placeholder="Telefonszám"
+                    pattern="^\+?\d{9,15}$"
+                    required
+                  />
+                </div>
+                <!-- Email -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="email"
+                    class="form-control con-validate"
+                    name="email"
+                    id="contact-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <!-- Location -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control con-validate"
+                    name="location"
+                    id="contact-location"
+                    placeholder="Helység"
+                    required
+                  />
+                </div>
+                <!-- County -->
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control con-validate"
+                    name="county"
+                    id="contact-county"
+                    placeholder="Megye"
+                    required
+                  />
+                </div>
+                <!-- Dropdown: Mire jelentkezel? -->
+                <div class="col-md-12 form-group">
+                  <select
+                    name="event"
+                    class="form-control con-validate"
+                    id="contact-event"
+                    required
+                  >
+                    <option value="" disabled selected hidden>Mire jelentkezel?</option>
+                    <option value="Konferencia">Konferencia</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Konferencia + Workshop">Konferencia + Workshop</option>
+                  </select>
+                </div>
+                <!-- Submit Button -->
+                <div class="col-md-12">
+                  <button type="submit" id="contact-submit" class="main-button">Küldés</button>
+                </div>
+              </form>
+              
+              <!-- Blank line -->
+              <br />
+              
+              <!-- Placeholder for the Success Message -->
+              <div id="form-message" class="col-md-12 form-group" style="display: none;"></div>
+              
             </div>
-        <!-- About Section END-->
+        </div>
+    </div>
+</section>
+<!--Contact Us Section Ends-->
+<div class="program-container">
 
 
-
-        <br><br><br>
-
+    <p class="highlight">Early Bird jegyek: -20% kedvezmény, január 9-ig.</p>
 
 
-
-
-
+</div>
 
         <!--KONFERENCIA Section Start-->
         
@@ -316,7 +417,7 @@
         <!--Site main js-->
         <script src="js/script_konf.js"></script>
         <!--Send mail js-->
-<!--         <script src="netlify/functions/sendEmail.js"></script> -->
+        <script src="js/message_konf.js"></script>
 
     </body>
 </html>
