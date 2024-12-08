@@ -121,6 +121,78 @@ select:hover {
 }
 
 
+/*============= Registration Item ==================*/
+
+#contact2 {
+  padding-top: 0px;
+  padding-bottom: 100px;
+  display: flex;  /* Use flexbox for centering */
+  justify-content: center;  /* Horizontally center the content */
+  align-items: center;  /* Vertically center the content */
+}
+
+#contact2 h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+#contact2 .contact-item h4 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#contact2 .contact-item p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#contact2 form {
+  width: 100%; /* Ensures form takes full available width */
+  max-width: 800px;  /* You can adjust the max width to your preferred value */
+  margin: 0 auto;  /* Centers the form horizontally */
+}
+
+#contact2 form .form-group {
+  margin-bottom: 24px; /* Keep bottom margin unchanged */
+}
+
+#contact2 form .form-group .form-control {
+  font-size: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  height: 52px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#contact2 form .form-group textarea.form-control {
+  height: auto;
+}
+
+#contact2 form .form-group .con-error {
+  border-color: red;
+}
+
+#contact2 form .form-control:hover,
+#contact2 form .form-control:active,
+#contact2 form .form-control:focus {
+  -webkit-box-shadow: none;
+  -moz-webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #666666;
+}
 
 
-
+#about2 {
+  padding-top: 120px;
+  padding-bottom: 10px;
+}
