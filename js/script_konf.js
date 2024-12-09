@@ -34,18 +34,18 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
       // Define URLs for redirection
       let redirectUrl = '';
       if (cardId === 1 && (selectedValue === "default" || selectedValue === "100")) {
-        redirectUrl = "https://buy.stripe.com/4gwbJP1490uugAE4gk";
-      } else if (cardId === 2) {
+        redirectUrl = "https://buy.stripe.com/8wM0177sxa543NS003";
+    } else if (cardId === 2) {
         if (selectedValue === "50") {
-          redirectUrl = "#";
+            redirectUrl = "https://book.stripe.com/4gw3dj9AFgtsdos5kp";
         } else if (selectedValue === "100") {
-          redirectUrl = "#";
+            redirectUrl = "https://book.stripe.com/9AQ3djfZ3gts1FK14a";
         }
-      } else if (cardId === 3) {
+    } else if (cardId === 3) {
         if (selectedValue === "50") {
-          redirectUrl = "#";
+            redirectUrl = "https://book.stripe.com/4gw3dj1494KKacg3cj";
         } else if (selectedValue === "100") {
-          redirectUrl = "#";
+            redirectUrl = "https://book.stripe.com/00g4hn6ot6SS3NS9AI";
         }
       }
   
