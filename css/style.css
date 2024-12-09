@@ -576,9 +576,9 @@ body.loaded p {
 }
 
 #about .about-info-container .about-info .info-item img {
-    width: 100px;
-    -webkit-border-radius: 90px;
-    border-radius: 90px;
+    width: 180px;
+    -webkit-border-radius: 160px;
+    border-radius: 160px;
     border: 5px solid #fff;
     margin-bottom: 20px;
 }

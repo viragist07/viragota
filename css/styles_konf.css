@@ -197,7 +197,15 @@ select:hover {
   padding-bottom: 10px;
 }
 
-#fontos {
-  padding-top: 120px;
-  padding-bottom: 300px;
+.fontos {
+  padding-top: 30px;
+  padding-bottom: 200px;
+  padding-left: 20px; /* Adds 20px padding to the left */
+  padding-right: 20px; /* Adds 20px padding to the right */
+  text-align: left; /* Aligns text to the left */
+  margin: 0 auto; /* Centers the container horizontally */
+  max-width: 800px; /* Sets a maximum width for the container */
+  width: 90%; /* Ensures responsiveness */
 }
+
+
