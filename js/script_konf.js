@@ -37,15 +37,15 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
         redirectUrl = "https://book.stripe.com/4gwbJP1490uugAE4gk";
     } else if (cardId === 2) {
         if (selectedValue === "50") {
-            redirectUrl = "https://book.stripe.com/4gw3dj9AFgtsdos5kp";
+            redirectUrl = "#";
         } else if (selectedValue === "100") {
-            redirectUrl = "https://book.stripe.com/9AQ3djfZ3gts1FK14a";
+            redirectUrl = "#";
         }
     } else if (cardId === 3) {
         if (selectedValue === "50") {
-            redirectUrl = "https://book.stripe.com/4gw3dj1494KKacg3cj";
+            redirectUrl = "#";
         } else if (selectedValue === "100") {
-            redirectUrl = "https://book.stripe.com/00g4hn6ot6SS3NS9AI";
+            redirectUrl = "#";
         }
       }
   
