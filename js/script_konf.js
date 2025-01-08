@@ -34,28 +34,27 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
       // Define URLs for redirection
       let redirectUrl = '';
       if (cardId === 1 && (selectedValue === "default" || selectedValue === "100")) {
-        redirectUrl = "https://book.stripe.com/4gwbJP1490uugAE4gk";
-    } else if (cardId === 2) {
-        if (selectedValue === "50") {
-            redirectUrl = "#";
-        } else if (selectedValue === "100") {
-            redirectUrl = "#";
-        }
-    } else if (cardId === 3) {
-        if (selectedValue === "50") {
-            redirectUrl = "#";
-        } else if (selectedValue === "100") {
-            redirectUrl = "#";
-        }
+          redirectUrl = "https://book.stripe.com/4gwbJP1490uugAE4gk";
+      } else if (cardId === 2) {
+          if (selectedValue === "50") {
+              // No action
+          } else if (selectedValue === "100") {
+              // No action
+          }
+      } else if (cardId === 3) {
+          if (selectedValue === "50") {
+              // No action
+          } else if (selectedValue === "100") {
+              // No action
+          }
       }
   
-      // Redirect to the URL if valid
+      // Redirect if a valid URL is set
       if (redirectUrl) {
-        window.location.href = redirectUrl;
-      } else {
-        alert("Kérjük, válassz egy lehetőséget a folytatáshoz.");
+          window.location.href = redirectUrl;
       }
-    });
+  });
+ 
   }
   
   // Initialize cards
