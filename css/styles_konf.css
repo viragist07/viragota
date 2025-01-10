@@ -24,11 +24,13 @@
   display: flex; /* Enable flexbox for alignment */
   flex-direction: column; /* Stack content vertically */
   justify-content: space-between; /* Distribute content evenly for vertical alignment */
-  padding: 26px; /* Set top, bottom, and side padding to 16px */
+  padding: 26px; /* Set consistent padding */
   flex-shrink: 0;
+  height: 540px; /* Fix card height to 400px */
   font-family: 'Cormorant', Sans-serif;
   margin-bottom: 40px; /* Maintain space between cards */
 }
+
 
 /* Image styling */
 .card-image {
