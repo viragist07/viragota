@@ -24,7 +24,7 @@
   display: flex; /* Enable flexbox for alignment */
   flex-direction: column; /* Stack content vertically */
   justify-content: space-between; /* Distribute content evenly for vertical alignment */
-  padding: 16px; /* Set top, bottom, and side padding to 16px */
+  padding: 26px; /* Set top, bottom, and side padding to 16px */
   flex-shrink: 0;
   font-family: 'Cormorant', Sans-serif;
   margin-bottom: 40px; /* Maintain space between cards */
