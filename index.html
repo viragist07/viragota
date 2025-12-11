@@ -583,70 +583,76 @@
                             </div>
                         </div>
                     </div>
-                    <!--form section-->
-                    <div class="col-md-8 col-sm-12 wow fadeInRight message-box" data-wow-delay="0.6s">
-                        <h2 class="text-right">ÜZENETKÜLDÉS</h2>
-                        <!--form start-->  
+                    <!-- Form section -->
+<div class="col-md-8 col-sm-12 wow fadeInRight message-box" data-wow-delay="0.6s">
+    <h2 class="text-right">ÜZENETKÜLDÉS</h2>
 
-                        <form
-                        name="contact"
-                        method="POST"
-                        data="true"
-                        onsubmit="handleFormSubmit(event)"
-                        class="row"
-                      >
-<!-- Name -->
-                        <div class="col-md-6 form-group">
-                          <input
-                            type="text"
-                            class="form-control con-validate"
-                            name="name"
-                            id="contact-name"
-                            placeholder="Név"
-                            minlength="3"
-                            required
-                          />
-                        </div>
-<!-- Email -->
-                        <div class="col-md-6 form-group">
-                          <input
-                            type="email"
-                            class="form-control con-validate"
-                            name="email"
-                            id="contact-email"
-                            placeholder="Email"
-                            required
-                          />
-                        </div>
-                        
-<!-- Message -->
-                        <div class="col-md-12 form-group">
-                          <textarea
-                            class="form-control con-validate"
-                            name="message"
-                            id="contact-message"
-                            placeholder="Üzenet"
-                            rows="4"
-                            required
-                          ></textarea>
-                        </div>
-<!-- Submit Button -->
-                        <div class="col-md-12">
-                          <button type="submit" id="contact-submit" class="main-button">Küldés</button>
-                        </div>
-                      </form>
-                  
+    <!-- Form start -->
+    <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        onsubmit="handleFormSubmit(event)"
+        class="row"
+    >
+        <!-- REQUIRED for Netlify when using JavaScript fetch -->
+        <input type="hidden" name="form-name" value="contact">
 
-<!-- Blank line -->
-                        <br/>
+        <!-- Honeypot -->
+        <div style="display:none">
+            <input name="bot-field" />
+        </div>
 
-                      <!-- Placeholder for the Success Message -->
-                      <div id="form-message" class="col-md-12 form-group" style="display: none;"></div>
-                      
+        <!-- Name -->
+        <div class="col-md-6 form-group">
+            <input
+                type="text"
+                class="form-control con-validate"
+                name="name"
+                id="contact-name"
+                placeholder="Név"
+                minlength="3"
+                required
+            />
+        </div>
 
-                          
-                    
-                    </div>
+        <!-- Email -->
+        <div class="col-md-6 form-group">
+            <input
+                type="email"
+                class="form-control con-validate"
+                name="email"
+                id="contact-email"
+                placeholder="Email"
+                required
+            />
+        </div>
+
+        <!-- Message -->
+        <div class="col-md-12 form-group">
+            <textarea
+                class="form-control con-validate"
+                name="message"
+                id="contact-message"
+                placeholder="Üzenet"
+                rows="4"
+                required
+            ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-12">
+            <button type="submit" id="contact-submit" class="main-button">Küldés</button>
+        </div>
+    </form>
+
+    <br/>
+
+    <!-- Success/error message -->
+    <div id="form-message" class="col-md-12 form-group" style="display: none;"></div>
+</div>
+                     
                 </div>
             </div>
         </section>
