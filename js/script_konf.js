@@ -3,6 +3,8 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
   const priceDisplay = document.getElementById(`price-display-${cardId}`);
   const checkoutButton = document.getElementById(`checkout-button-${cardId}`);
 
+  if (!priceDisplay || !checkoutButton) return;
+
   // Set the default price display
   priceDisplay.textContent = `${basePrice.toLocaleString('ro-RO', {
     minimumFractionDigits: 2,
@@ -13,48 +15,33 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
   if (hasFiftyPercentOption) {
     const priceOptions = document.getElementById(`price-options-${cardId}`);
 
-    priceOptions.addEventListener('change', function () {
-      const selectedValue = this.value;
-      if (selectedValue === "50") {
-        const price = basePrice * 0.5;
+    if (priceOptions) {
+      priceOptions.addEventListener('change', function () {
+        const selectedValue = this.value;
+
+        const price =
+          selectedValue === "50" ? basePrice * 0.5 : basePrice;
+
         priceDisplay.textContent = `${price.toLocaleString('ro-RO', {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         })} lei`;
-      } else {
-        priceDisplay.textContent = `${basePrice.toLocaleString('ro-RO', {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        })} lei`;
-      }
-    });
+      });
+    }
   }
 
   // Handle button click for redirecting to URLs
   checkoutButton.addEventListener('click', function () {
     let redirectUrl = '';
 
-    // Define URLs for redirection based on cardId and selection
     if (cardId === 1) {
-      redirectUrl = "https://book.stripe.com/dR64hn5kpb985W08wG";
-    } else if (cardId === 2 || cardId === 3) {
-      const selectedValue = document.getElementById(`price-options-${cardId}`).value;
-      if (cardId === 2) {
-        if (selectedValue === "50") {
-          // No action
-        } else if (selectedValue === "100") {
-          // No action
-        }
-      } else if (cardId === 3) {
-        if (selectedValue === "50") {
-          // No action
-        } else if (selectedValue === "100") {
-          // No action
-        }
-      }
+      redirectUrl = "https://buy.stripe.com/cNicMXbnc4n87lhbW48Zq0d";
+    } else if (cardId === 2) {
+      redirectUrl = "https://buy.stripe.com/7sY7sDfDs6vgdJFe4c8Zq0c";
+    } else if (cardId === 3) {
+      redirectUrl = "https://buy.stripe.com/eVq28j76WcTE351aS08Zq0b";
     }
 
-    // Redirect if a valid URL is set
     if (redirectUrl) {
       window.location.href = redirectUrl;
     }
@@ -62,6 +49,6 @@ function updatePrice(cardId, basePrice, hasFiftyPercentOption = false) {
 }
 
 // Initialize cards
-updatePrice(1, 600); // Card 1: "Konferencia" (no price selector)
-updatePrice(2, 2080, true); // Card 2: "Workshop" (with price selector)
-updatePrice(3, 2240, true); // Card 3: "Konferencia és Workshop" (with price selector)
+updatePrice(1, 600);
+updatePrice(2, 2000, true);
+updatePrice(3, 2600, true);
