@@ -15,7 +15,7 @@ function handleFormSubmit(event) {
     .then(() => {
       // Display the success message
       messageContainer.style.display = "block";
-      messageContainer.textContent = "Köszönjük az üzeneted! A jelentkezés véglegesítéséhez kérlek vásárold meg az alábbi jegyek egyikét!";
+      messageContainer.textContent = "Köszönjük az üzeneted! A jelentkezés véglegesítéséhez kérlek, hogy vásárold meg az alábbi jegyek egyikét!";
       messageContainer.classList.add("form-control", "con-validate");
       messageContainer.style.textAlign = "center";
       messageContainer.style.backgroundColor = "#dff0d8"; // Optional: Add a light green background
