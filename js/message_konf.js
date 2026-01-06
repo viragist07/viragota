@@ -3,7 +3,7 @@ function handleFormSubmit(event) {
 
   const form = event.target;
   const messageContainer = document.getElementById("form-message");
-
+ 
   // Gather form data for Netlify submission
   const formData = new FormData(form);
 
