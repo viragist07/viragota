@@ -328,33 +328,33 @@
     </div>
 
     <!-- Dropdown: Mire jelentkezel? -->
-    <div class="col-md-12 form-group">
-        <select
-            name="event"
-            class="form-control con-validate"
-            id="contact-event"
-            required
-        >
-            <option value="" disabled selected hidden>Mire jelentkezel?</option>
-            <option value="Konferencia">Konferencia</option>
-            <option value="Workshop">Workshop</option>
-            <option value="Konferencia + Workshop">Konferencia + Workshop</option>
-        </select>
-    </div>
-     <!-- Dropdown: Ebéd? -->
-     <div class="col-md-12 form-group">
-        <select
-            name="ebéd"
-            class="form-control con-validate"
-            id="contact-event"
-            required
-        >
-            <option value="" disabled selected hidden>Igényelsz ebédet a konferencia napján?</option>
-            <option value="Igen">Igen</option>
-            <option value="Nem">Nem</option>
-            
-        </select>
-    </div>
+<div class="col-md-12 form-group">
+    <select
+        name="event_type"
+        class="form-control con-validate"
+        id="contact-event-type"
+        required
+    >
+        <option value="" disabled selected hidden>Mire jelentkezel?</option>
+        <option value="Konferencia">Konferencia</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Konferencia + Workshop">Konferencia + Workshop</option>
+    </select>
+</div>
+
+<!-- Dropdown: Ebéd -->
+<div class="col-md-12 form-group">
+    <select
+        name="lunch"
+        class="form-control con-validate"
+        id="contact-lunch"
+        required
+    >
+        <option value="" disabled selected hidden>Igényelsz ebédet a konferencia napján?</option>
+        <option value="Igen">Igen</option>
+        <option value="Nem">Nem</option>
+    </select>
+</div>
 
     <!-- Submit Button -->
     <div class="col-md-12">
