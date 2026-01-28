@@ -3,25 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konferencia Program</title>
+  <title>Program Image</title>
   <style>
-    /* Reset default margin/padding */
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #fff; /* Optional background */
+      background-color: #fff;
+      width: 100%;
     }
 
-    /* Make the image responsive and borderless */
-    img {
-      max-width: 100%;
+    body.horizontal-fit img {
+      width: 100%; /* fit screen width */
       height: auto;
+    }
+
+    body.vertical-fill img {
+      width: auto;
+      height: 100vh; /* fill viewport height */
+      max-width: 100%;
       display: block;
-      border: none;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
   </style>
 </head>
-<body>
-  <img src="images/program.png" alt="Program Image">
+<body class="horizontal-fit">
+  <img id="programImage" src="images/program.png" alt="Program Image">
+
+  <script>
+    const img = document.getElementById('programImage');
+    const body = document.body;
+    let verticalView = false;
+
+    function toggleView() {
+      verticalView = !verticalView;
+
+      if (verticalView) {
+        // Fill screen vertically
+        body.classList.remove('horizontal-fit');
+        body.classList.add('vertical-fill');
+      } else {
+        // Fit horizontally
+        body.classList.remove('vertical-fill');
+        body.classList.add('horizontal-fit');
+        window.scrollTo(0,0); // scroll back to top
+      }
+    }
+
+    // Double-click for desktop
+    img.addEventListener('dblclick', toggleView);
+
+    // Double-tap for mobile
+    let lastTap = 0;
+    img.addEventListener('touchend', (e) => {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+      if (tapLength < 300 && tapLength > 0) {
+        toggleView();
+        e.preventDefault();
+      }
+      lastTap = currentTime;
+    });
+  </script>
 </body>
 </html>
